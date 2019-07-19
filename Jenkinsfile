@@ -21,7 +21,8 @@ pipeline {
 
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                // sh './jenkins/scripts/deliver.sh'
+                echo '权限拒绝，无法实现'
             }
         }
     }
