@@ -13,15 +13,15 @@ pipeline {
             }
 
             post {
-                    always {
-                        junit 'target/surefire-reports/*.xml'
-                    }
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
             }
         }
 
         stage('Deliver') {
             steps {
-                sudo sh './jenkins/scripts/deliver.sh'
+                sh './jenkins/scripts/deliver.sh'
             }
         }
     }
